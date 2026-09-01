@@ -114,9 +114,31 @@
     </div>
 
     <script>
-        // Task 1: Variables and String Concatenation
-
         document.getElementById("processBtn").addEventListener("click", function() {
+
+            // Part 2 - Task 1: Popup Boxes and Conditional Logic
+
+            // Ask the user for confirmation
+            var confirmation = confirm("are you sure?");
+
+            // Check the user's response
+            if (confirmation === false) {
+
+                // User clicked Cancel
+                alert("Data processing has been cancelled.");
+
+                // Stop the rest of the script
+                return;
+
+            } else {
+
+                // User clicked OK
+                // Continue with the rest of the script
+
+            }
+
+
+            // Task 1: Variables and String Concatenation
 
             // Create variables to store the values entered in the fields
             var studentName = document.getElementById("studentName").value;
@@ -156,7 +178,7 @@
             // Very large number using scientific notation
             var veryLargeNumber = 4.25e+6;
 
-            // Very small decimal using scientific notation
+            // Very small number using scientific notation
             var verySmallNumber = 4.25e-6;
 
 
