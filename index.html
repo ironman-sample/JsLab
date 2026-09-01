@@ -141,9 +141,6 @@
             // Divide Value A by Value B
             var divisionResult = valueA / valueB;
 
-            // Output the division result
-            alert("Division result is " + divisionResult);
-
 
             // Task 3: Testing NaN
 
@@ -153,9 +150,6 @@
             // Attempt to divide the text by 2
             var nanResult = textForMath / 2;
 
-            // Output the result
-            alert("Text division result is " + nanResult);
-
 
             // Task 4: Scientific Notation
 
@@ -164,6 +158,17 @@
 
             // Very small decimal using scientific notation
             var verySmallNumber = 4.25e-6;
+
+
+            // Task 5: Output using document.write()
+
+            document.write("Division result is " + divisionResult + "<br>");
+
+            document.write("Text division result is " + nanResult + "<br>");
+
+            document.write("Very large number is " + veryLargeNumber + "<br>");
+
+            document.write("Very small number is " + verySmallNumber + "<br>");
 
         });
     </script>
