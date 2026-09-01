@@ -11,6 +11,7 @@
             background-color: #f4f7f6; 
             color: #333;
         }
+
         .container { 
             max-width: 650px; 
             margin: auto; 
@@ -19,35 +20,43 @@
             border-radius: 8px; 
             box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
         }
+
         h2 { 
             color: #2c3e50; 
             border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
         }
+
         .form-group { 
             margin-bottom: 20px; 
         }
+
         label { 
             display: block; 
             margin-bottom: 8px; 
             font-weight: 600; 
             font-size: 0.9em;
         }
-        input[type="text"], input[type="number"] { 
+
+        input[type="text"], 
+        input[type="number"] { 
             width: 100%; 
             padding: 10px; 
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box; 
         }
+
         input[type="checkbox"] {
             margin-right: 10px;
         }
+
         hr {
             border: 0;
             border-top: 1px solid #eee;
             margin: 30px 0;
         }
+
         button { 
             padding: 12px 20px; 
             background-color: #3498db; 
@@ -59,9 +68,11 @@
             font-weight: bold;
             width: 100%;
         }
+
         button:hover { 
             background-color: #2980b9; 
         }
+
         .hint {
             font-size: 0.85em;
             color: #7f8c8d;
@@ -69,12 +80,20 @@
         }
     </style>
 </head>
+
 <body>
+
     <div class="container">
+
         <h2>Undergraduate JavaScript Fundamentals Lab</h2>
-        <p>Fill out the fields below. Currently, this form is entirely static. Your assignment is to bring it to life using JavaScript.</p>
+
+        <p>
+            Fill out the fields below. Currently, this form is entirely static.
+            Your assignment is to bring it to life using JavaScript.
+        </p>
         
         <form id="jsLabForm">
+
             <div class="form-group">
                 <label for="studentName">1. Student Name:</label>
                 <input type="text" id="studentName" placeholder="Enter your full name">
@@ -87,11 +106,13 @@
             
             <div class="form-group">
                 <label for="isEnrolled">
-                    <input type="checkbox" id="isEnrolled"> 3. Is currently enrolled in the degree program
+                    <input type="checkbox" id="isEnrolled">
+                    3. Is currently enrolled in the degree program
                 </label>
             </div>
             
             <hr>
+
             <h3 style="color: #2c3e50;">Math & Special Values Tester</h3>
             
             <div class="form-group">
@@ -110,13 +131,21 @@
             </div>
             
             <button type="button" id="processBtn">Process Data</button>
+
         </form>
+
     </div>
 
+
     <script>
+
         document.getElementById("processBtn").addEventListener("click", function() {
 
-            // Part 2 - Task 1: Popup Boxes and Conditional Logic
+
+            // ==========================================
+            // PART 2 - TASK 1
+            // Popup Boxes and Conditional Logic
+            // ==========================================
 
             // Ask the user for confirmation
             var confirmation = confirm("are you sure?");
@@ -138,51 +167,74 @@
             }
 
 
-            // Task 1: Variables and String Concatenation
+            // ==========================================
+            // TASK 1
+            // Variables and String Concatenation
+            // ==========================================
 
             // Create variables to store the values entered in the fields
             var studentName = document.getElementById("studentName").value;
+
             var studentAge = document.getElementById("studentAge").value;
+
             var isEnrolled = document.getElementById("isEnrolled").checked;
+
 
             // Combine the variables using string concatenation (+)
             var studentInfo = "Student Name is " + studentName +
                               ", Age is " + studentAge +
                               ", Enrolled status is " + isEnrolled;
 
+
             // Display the sentence using alert()
             alert(studentInfo);
 
 
-            // Task 2: Testing Infinity
+            // ==========================================
+            // TASK 2
+            // Testing Infinity
+            // ==========================================
 
             // Capture Value A and Value B
             var valueA = Number(document.getElementById("numA").value);
+
             var valueB = Number(document.getElementById("numB").value);
+
 
             // Divide Value A by Value B
             var divisionResult = valueA / valueB;
 
 
-            // Task 3: Testing NaN
+            // ==========================================
+            // TASK 3
+            // Testing NaN
+            // ==========================================
 
             // Capture the text entered in Text for Math Operation
             var textForMath = document.getElementById("wordValue").value;
+
 
             // Attempt to divide the text by 2
             var nanResult = textForMath / 2;
 
 
-            // Task 4: Scientific Notation
+            // ==========================================
+            // TASK 4
+            // Scientific Notation
+            // ==========================================
 
             // Very large number using scientific notation
             var veryLargeNumber = 4.25e+6;
+
 
             // Very small number using scientific notation
             var verySmallNumber = 4.25e-6;
 
 
-            // Task 5: Output using document.write()
+            // ==========================================
+            // TASK 5
+            // Output using document.write()
+            // ==========================================
 
             document.write("Division result is " + divisionResult + "<br>");
 
@@ -193,10 +245,14 @@
             document.write("Very small number is " + verySmallNumber + "<br>");
 
 
-            // Part 2 - Task 2: Arrays & Output
+            // ==========================================
+            // PART 2 - TASK 2
+            // Arrays & Output
+            // ==========================================
 
             // Create an array with at least three string values
             var subjects = ["JavaScript", "HTML", "CSS"];
+
 
             // Use a for...of loop to iterate through the array
             for (var subject of subjects) {
@@ -206,7 +262,26 @@
 
             }
 
+
+            // ==========================================
+            // PART 2 - TASK 3
+            // Standard Loop & Document Output
+            // ==========================================
+
+            // Use the Value A that was already captured earlier.
+            // Do NOT use document.getElementById("numA") here,
+            // because document.write() has already replaced the form.
+
+            // Standard for loop
+            for (var i = 0; i < valueA; i++) {
+
+                // Print the student name on a new line
+                document.write(studentName + "<br>");
+
+            }
+
         });
+
     </script>
 
 </body>
