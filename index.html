@@ -112,5 +112,26 @@
             <button type="button" id="processBtn">Process Data</button>
         </form>
     </div>
+
+    <script>
+        // Task 1: Variables and String Concatenation
+
+        document.getElementById("processBtn").addEventListener("click", function() {
+
+            // Create variables to store the values entered in the fields
+            var studentName = document.getElementById("studentName").value;
+            var studentAge = document.getElementById("studentAge").value;
+            var isEnrolled = document.getElementById("isEnrolled").checked;
+
+            // Combine the variables using string concatenation (+)
+            var studentInfo = "Student Name is " + studentName +
+                              ", Age is " + studentAge +
+                              ", Enrolled status is " + isEnrolled;
+
+            // Display the sentence using alert()
+            alert(studentInfo);
+        });
+    </script>
+
 </body>
 </html>
